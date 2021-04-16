@@ -1,0 +1,87 @@
+@import '../../sass/variables';
+    
+.Header__Wrapper
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin: 0 auto;
+    align-items: center;
+    height: 106px;
+
+.Logo 
+    width: 100px;
+
+    img
+        width: 100%;
+
+.right__menu 
+    display: flex;
+    align-items: flex-start;
+
+    .bascket
+        width: 100px;
+
+.items 
+    grid-template-areas: items;
+
+.image
+    grid-template-areas: image;
+    display: flex;
+
+.menu-lists 
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    align-items: center;
+
+    a
+        text-decoration: none;
+        color: $listColor;
+
+    li
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer
+
+        ul
+            visibility: hidden;
+            transition: all 0.5s;
+            opacity: 0;
+            display: grid;
+            grid-template-areas: items items image;
+            grid-template-columns: 2fr  1fr;
+            position: absolute;
+            left: 0;
+            background-color: red;
+            top: 106px;
+            left: -197px;
+            width: 700px;
+            background-color: $backgroundColor;
+            box-shadow: -7px 11px 45px -16px rgba(0,0,0,0.75);
+            .items
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .items_list
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 20px;
+                    h3
+                        color: #353535;
+                        margin-bottom: 15px;
+                span
+                    margin-top: 10px;
+            
+        &:hover
+            ul
+                visibility: visible;
+                opacity: 1;
+               
+        
+
