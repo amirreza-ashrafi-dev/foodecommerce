@@ -1,7 +1,10 @@
 import React from 'react';
+import Slider from '../../components/slider/slider.component';
 
 const Home = () => (
-    <div>Home page</div>
+    <div>
+        <Slider />
+    </div>
 )
 
 export default Home;
