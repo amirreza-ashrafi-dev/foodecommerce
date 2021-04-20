@@ -3,11 +3,12 @@ import './offs-box.styles.sass';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { fetchOffs } from '../../redux/offs/offs.reselect';
+import './offs-box.styles.sass';
 
 const OffsBox = ({ offs }) => {
     return offs.map((off, idx) => (
         <div className='Offs__Box' key={idx}>
-            <img src="https://preview.hasthemes.com/neha/assets/img/banner/20.jpg" alt="" />
+            <img src={off.image} alt="" />
             <div className='banner_content'>
                 <h3>{off.name}</h3>
                 <h2>{off.desc}</h2>

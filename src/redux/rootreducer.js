@@ -4,10 +4,12 @@ import storage from "redux-persist/lib/storage";
 // Reducers
 import menuList from "./menu-list/menu-list.reducer";
 import offs from "./offs/offs.reducer";
+import products from "./product/product.reducer";
 
 const rootReducer = combineReducers({
   menuList: menuList,
   offs: offs,
+  products: products,
 });
 
 const persistConfig = {

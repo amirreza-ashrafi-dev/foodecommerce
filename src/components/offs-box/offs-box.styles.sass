@@ -1,0 +1,28 @@
+@import '../../sass/variables';
+    
+%headerStyle
+    margin-bottom: 10px;
+    color: $backgroundColor
+    
+.Offs__Box
+        display: flex;
+        position: relative
+        margin-left: 40px;
+        .banner_content
+            position: absolute;
+            right: 30px;
+            top: 10%;
+            padding: 54px 20px 52px;
+            background-color: rgba(238, 51, 51, 0.75);
+            width: 184px;
+            height: 247px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            h3
+                @extend %headerStyle
+                font-size: 30px;
+            h2
+                @extend  %headerStyle
+                font-size: 20px;

@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     {
       name: "پیتزا",
       desc: "ایتالیایی",
-      image: "https://preview.hasthemes.com/neha/assets/img/banner/19.jpg",
+      image: "https://preview.hasthemes.com/neha/assets/img/banner/20.jpg",
     },
     {
       name: "پیتزا",
