@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/mixins';
     
 .tab__wrapper
     margin-top: 100px;
@@ -12,47 +13,11 @@
         flex-wrap: wrap;
         opacity: 0;
         transition: all 0.5s;
-
-        .tab__items
-            display: flex;
-            flex-direction: column;
-            background-color: red;
-            align-items: center;
-            position: relative;
-            margin-top: 60px;
-            transition: all 0.3s;
-            cursor: pointer;
-            &:hover
-                box-shadow: 1px 2px 15px -6px #000000;
-    ul
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            // padding-bottom: 15px;
-            border-bottom: 1px solid $lineColor;
-            font-size: 20px;
-    li
-        padding: 10px;
-        margin-right: 10px;
-        cursor: pointer;
         &:focus
             border: 0;
+            
+    @include porductCard
 
     .tabpanel__selected
         opacity: 1;
 
-    .product-info
-        position: absolute;
-        top: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h4
-            margin-bottom: 10px;
-        span
-            margin-bottom: 10px;
-            direction: rtl;
-        ul
-            border-bottom: 0;
-        a
-            color: $listColor;

@@ -11,7 +11,8 @@ const Home = () => (
         <OffsLists />
         <div className='content'>
             <ProductTab />
-            <FooterSlider />
+            <FooterSlider multiple={false} />
+            <FooterSlider multiple={true} />
         </div>
     </div>
 )
