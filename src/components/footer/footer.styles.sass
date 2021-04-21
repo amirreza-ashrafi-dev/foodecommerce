@@ -1,0 +1,73 @@
+@import '../../sass/variables';
+
+.footer-container
+    width: 100vw;
+    height: 300px;
+    margin-top: 30px;
+    background-image: url('https://preview.hasthemes.com/neha/assets/img/bg/4.jpg');
+    .food-footer
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1024px;
+        margin: 0px auto;
+        padding-top: 50px;
+        align-items: flex-start;
+    section
+        direction: rtl;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        &:nth-child(1)
+            h3
+                font-size: 20px;
+            p
+                margin-top: 10px;
+                line-height: 25px;
+                text-align: justify;
+            span
+                margin-top: 15px;
+                direction: ltr;
+        &:nth-child(2)
+            text-align: center;
+            .social_logo
+                a
+                    margin-right: 30px;
+                    font-size: 30px;
+                    color: $lineColor;
+            ul
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                li
+                    margin-right: 10px;
+            span
+                margin-top: 15px;
+                line-height: 23px;
+        &:nth-child(3)
+            
+            h3
+                font-size: 25px;
+                margin-bottom: 15px;
+            p
+                line-height: 25px;
+                margin-bottom: 15px;
+            .news__letter
+                display: flex;
+                input[type='text']
+                    border: 1px solid $lineColor;
+                    padding: 10px;
+                    border-radius: 0 5px 5px 0 ;
+                    &:focus
+                        outline: 0;
+                input[type='button']
+                    transform: translateX(67px);
+                    border: medium none;
+                    border-right: 1px solid $lineColor;
+                    height: 25px;
+                    margin-top: 6px;
+                    background-color: transparent;
+
+            
+            
+            

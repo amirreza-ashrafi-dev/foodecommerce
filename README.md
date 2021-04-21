@@ -8,3 +8,4 @@
 - redux-thunk
 - reselect (for cache state)
 - swiperslider
+- react-router
