@@ -9,3 +9,4 @@
 - reselect (for cache state)
 - swiperslider
 - react-router
+- redux logger (for log global states)

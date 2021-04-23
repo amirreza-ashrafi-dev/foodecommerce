@@ -8,8 +8,9 @@ import ListChildItems from '../list-child-items/list-child-items.component';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { fetchMenuList } from '../../redux/menu-list/menu-list.selector';
+import { TotalItems } from '../../redux/cart/cart.selector';
 
-const Header = ({ Lists }) => {
+const Header = ({ Lists, itemCount }) => {
     return (
         <div className='Header__Wrapper'>
             <div className='Logo'><img src={Logo} alt="Logo" /></div>
@@ -36,12 +37,14 @@ const Header = ({ Lists }) => {
             </ul>
             <div className='right__menu'>
                 <Bascket className='bascket' />
+                {itemCount > 0 ? <h3>{itemCount}</h3> : ''}
             </div>
         </div>
     )
 };
 
 const mapStateToProps = createStructuredSelector({
-    Lists: fetchMenuList
+    Lists: fetchMenuList,
+    itemCount: TotalItems
 })
 export default connect(mapStateToProps)(Header);

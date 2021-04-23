@@ -2,20 +2,34 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket, faEye } from '@fortawesome/free-solid-svg-icons';
 import './product-card.styles.sass';
+import { AddToCart } from '../../redux/cart/cart.actions';
+import { connect } from 'react-redux';
 
-const ProductCard = () => (
-    <div className='tab__items'>
-        <img src="https://preview.hasthemes.com/neha/assets/img/product/food/3.jpg" alt="" />
+const ProductCard = ({ title, price, imagePath, id, AddProductToCart }) => {
+    const AddItem = (cartItem, e) => {
 
-        <div className='product-info'>
-            <h4>محصول شماره یک</h4>
-            <span>30000 تومان</span>
-            <ul>
-                <li><a href="/"><FontAwesomeIcon icon={faShoppingBasket} /></a></li>
-                <li><a href="/"><FontAwesomeIcon icon={faEye} /></a></li>
-            </ul>
+        e.preventDefault();
+        console.log(cartItem)
+        AddProductToCart(cartItem);
+    }
+    return (
+        <div className='tab__items'>
+            <img src={`http://localhost:1337${imagePath}`} alt={title} />
+
+            <div className='product-info'>
+                <h4>{title}</h4>
+                <span>{price} تومان</span>
+                <ul>
+                    <li><a href="/" onClick={(e) => AddItem({ title, price, imagePath, id }, e)}><FontAwesomeIcon icon={faShoppingBasket} /></a></li>
+                    <li><a href="/"><FontAwesomeIcon icon={faEye} /></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
-export default ProductCard;
+const mapDispatchToProps = dispatch => ({
+    AddProductToCart: (cartItem) => dispatch(AddToCart(cartItem))
+})
+
+export default connect(null, mapDispatchToProps)(ProductCard);

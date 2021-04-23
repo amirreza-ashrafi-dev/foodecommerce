@@ -3,8 +3,12 @@ import swiperCore, { Parallax } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './footer-slider.styles.sass';
 import ProductCard from '../product-card/product-card.component';
+import UseFetch from '../customHooks/useFetch/use-fetch.hook';
 
 const FooterSlider = ({ multiple }) => {
+
+    const productList = UseFetch('products');
+
     swiperCore.use([Parallax]);
 
     return <div>
@@ -52,18 +56,14 @@ const FooterSlider = ({ multiple }) => {
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
+                        {
+                            productList.map((product) => (
+                                <SwiperSlide key={product.id}>
+                                    <ProductCard {...product} imagePath={product.images[0].imageurl.url} />
+                                </SwiperSlide>
+                            ))
+                        }
+
                     </Swiper>
 
                 </div>

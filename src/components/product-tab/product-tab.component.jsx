@@ -2,8 +2,13 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './tabs.styles.sass';
 import ProductCard from '../product-card/product-card.component';
+import UseFetch from '../customHooks/useFetch/use-fetch.hook';
 
 const ProductTab = () => {
+
+    const productList = UseFetch('products')
+
+
     return (
         <Tabs className='tab__wrapper'>
             <TabList>
@@ -15,42 +20,38 @@ const ProductTab = () => {
 
             <TabPanel className='tab__panel' selectedClassName='tabpanel__selected'>
 
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {
+                    productList.map((product) => (
+                        <ProductCard {...product} imagePath={product.images[0].imageurl.url} key={product.id} />
+                    ))
+                }
 
             </TabPanel>
             <TabPanel className='tab__panel' selectedClassName='tabpanel__selected'>
 
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {
+                    productList.map((product) => (
+                        <ProductCard {...product} imagePath={product.images[0].imageurl.url} key={product.id} />
+                    ))
+                }
 
             </TabPanel>
             <TabPanel className='tab__panel' selectedClassName='tabpanel__selected'>
 
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {
+                    productList.map((product) => (
+                        <ProductCard {...product} imagePath={product.images[0].imageurl.url} key={product.id} />
+                    ))
+                }
 
             </TabPanel>
             <TabPanel className='tab__panel' selectedClassName='tabpanel__selected'>
 
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {
+                    productList.map((product) => (
+                        <ProductCard {...product} imagePath={product.images[0].imageurl.url} key={product.id} />
+                    ))
+                }
 
             </TabPanel>
         </Tabs>
