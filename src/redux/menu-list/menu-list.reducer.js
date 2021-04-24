@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   menuList: [
     { name: "ورود", to: "/login" },
     { name: "عضویت", to: "/register" },
-    { name: "خانه", to: "/home" },
+    { name: "خانه", to: "/" },
     { name: "درباره", to: "/aboutUs" },
     {
       name: "فروشگاه",

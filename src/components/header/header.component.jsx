@@ -9,8 +9,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { fetchMenuList } from '../../redux/menu-list/menu-list.selector';
 import { TotalItems } from '../../redux/cart/cart.selector';
+import { useHistory } from 'react-router-dom';
 
 const Header = ({ Lists, itemCount }) => {
+    const history = useHistory();
     return (
         <div className='Header__Wrapper'>
             <div className='Logo'><img src={Logo} alt="Logo" /></div>
@@ -35,7 +37,7 @@ const Header = ({ Lists, itemCount }) => {
                     })
                 }
             </ul>
-            <div className='right__menu'>
+            <div className='right__menu' onClick={() => history.push('/checkout')}>
                 <Bascket className='bascket' />
                 {itemCount > 0 ? <h3>{itemCount}</h3> : ''}
             </div>

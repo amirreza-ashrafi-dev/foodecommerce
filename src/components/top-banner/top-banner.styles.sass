@@ -1,0 +1,42 @@
+@import '../../sass/variables';
+
+%OrderGlobalStyles
+    direction: rtl;
+    width: 50%;
+    
+.banner
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    h3
+        position: absolute;
+        top: 81%;
+        right: 3%;
+        font-size: 20px;
+        direction: rtl;
+    h1
+        position: absolute;
+        top: 65%;
+        right: 3%;
+        font-size: 50px;
+        direction: rtl;
+
+
+
+.order
+    @extend %OrderGlobalStyles
+    background: #f2f2f2 none repeat scroll 0 0;
+    padding: 30px 40px 45px;
+    thead, tr
+        border-bottom: 1px solid $lineColor;
+        padding: 10px !important;
+    th,td
+        padding: 20px  !important
+        text-align: center
+    .total
+        font-size: 20px;
+        padding: 0px  !important;
+
+
+.form
+    @extend %OrderGlobalStyles
