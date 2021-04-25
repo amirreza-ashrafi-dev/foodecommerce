@@ -17,3 +17,11 @@ export const AddToCart = (cartItems, cartItemsToAdd) => {
 
   return [...cartItems, { ...cartItemsToAdd, quantity: 1 }];
 };
+
+export const removeFromCart = (cartItems, cartItemsToRemove) => {
+  const filteredItems = cartItems.filter(
+    (items) => items.id !== cartItemsToRemove.id
+  );
+
+  return filteredItems;
+};
