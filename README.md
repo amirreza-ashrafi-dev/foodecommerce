@@ -10,3 +10,4 @@
 - swiperslider
 - react-router
 - redux logger (for log global states)
+- formik (for form )
