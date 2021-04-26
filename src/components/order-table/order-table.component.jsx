@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import { RmoveCart } from '../../redux/cart/cart.actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Button from '../../components/button/button.component';
 import './order-table.styles.sass';
 
 const OrderTable = ({ items, totalPrice, remove }) => {
@@ -41,8 +42,8 @@ const OrderTable = ({ items, totalPrice, remove }) => {
                         <td className='total' style={{ width: '140px' }}>{totalPrice} تومان</td>
                     </tr>
                 </tbody>
-
             </table>
+            <Button backgroundColor='#464646' text='پرداخت نهایی' path='/checkout/finalOrder' />
         </div>
     )
 }

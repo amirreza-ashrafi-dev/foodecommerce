@@ -10,6 +10,14 @@ const TranslateRoute = ({ routePath }) => {
                 </>
             )
 
+        case '/checkout/finalOrder':
+            return (
+                <>
+                    <h1>پرداخت</h1>
+                    <h3>خانه / پرداخت / فرم پرداختی</h3>
+                </>
+            )
+
         default:
             return routePath;
     }

@@ -6,7 +6,7 @@ const UseFetch = (url) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const request = await axios.get(`http://localhost:1337/${url}`);
+            const request = await axios.get(`https://immense-eyrie-67673.herokuapp.com/${url}`);
             const result = request.data
             setData(result);
         }
