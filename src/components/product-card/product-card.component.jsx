@@ -14,7 +14,7 @@ const ProductCard = ({ title, price, imagePath, id, AddProductToCart }) => {
     }
     return (
         <div className='tab__items'>
-            <img src={`https://immense-eyrie-67673.herokuapp.com${imagePath}`} alt={title} />
+            <img src={`${imagePath}`} alt={title} />
 
             <div className='product-info'>
                 <h4>{title}</h4>
